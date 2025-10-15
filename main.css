@@ -1,0 +1,360 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background: #ff1e8e;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  color: #2d1b0e;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-weight: 700;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  background: #00cfd5;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+}
+.header .logo {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.header .nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header .nav a:hover {
+  color: #ffd600;
+}
+.header .nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffd600;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.header .nav a:hover::after {
+  width: 100%;
+}
+.header .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.header .social .social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform, box-shadow, background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.header .social .social-btn:hover {
+  transform: scale(1.12) rotate(-5deg);
+  background: rgba(255, 214, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(255, 214, 0, 0.18);
+}
+.header .social .social-btn.instagram::before {
+  content: "";
+  background: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg") no-repeat center/60%;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(99%) saturate(7499%) hue-rotate(1deg) brightness(104%) contrast(104%);
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+.header .social .social-btn.dribbble::before {
+  content: "";
+  background: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/dribbble.svg") no-repeat center/60%;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(99%) saturate(7499%) hue-rotate(1deg) brightness(104%) contrast(104%);
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+.header .social .social-btn.behance::before {
+  content: "";
+  background: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/behance.svg") no-repeat center/60%;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(99%) saturate(7499%) hue-rotate(1deg) brightness(104%) contrast(104%);
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+.header .social .social-btn.linkedin::before {
+  content: "";
+  background: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg") no-repeat center/60%;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(99%) saturate(7499%) hue-rotate(1deg) brightness(104%) contrast(104%);
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+
+.hero {
+  background: linear-gradient(120deg, #ff1e8e 60%, #ffb3e6 100%);
+  color: #fff;
+  padding: 5rem 0 3rem 0;
+}
+.hero .hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero .hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.hero .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .hero-content .btn {
+  background: #ffd600;
+  color: #ff1e8e;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+  transition: background, color, transform, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero .hero-content .btn:hover {
+  background: #00cfd5;
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 32px rgba(0, 207, 213, 0.18);
+}
+
+section {
+  padding: 4rem 0;
+}
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00cfd5;
+  letter-spacing: 1px;
+}
+section p, section li {
+  font-size: 1.1rem;
+}
+
+.sobre {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sobre.active {
+  opacity: 1;
+  transform: none;
+}
+
+.projeto .projeto-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 900px) {
+  .projeto .projeto-box {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem;
+  }
+}
+.projeto .projeto-img {
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+}
+.projeto .projeto-img img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%/35%;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+  border: 6px solid #ffb3e6;
+  background: #ffb3e6;
+}
+@media (max-width: 600px) {
+  .projeto .projeto-img img {
+    width: 90vw;
+    height: 40vw;
+    min-width: 0;
+  }
+}
+.projeto .projeto-info {
+  flex: 2 1 400px;
+}
+.projeto .projeto-info h4 {
+  color: #ff1e8e;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+.projeto .projeto-info p {
+  color: #2d1b0e;
+}
+.projeto {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projeto.active {
+  opacity: 1;
+  transform: none;
+}
+
+.educacao {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+}
+.educacao ul {
+  list-style: none;
+  padding: 0;
+}
+.educacao ul li {
+  margin-bottom: 1rem;
+}
+.educacao ul li strong {
+  color: #ff1e8e;
+}
+.educacao {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.educacao.active {
+  opacity: 1;
+  transform: none;
+}
+
+.contato {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+}
+.contato .contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contato .contato-form input, .contato .contato-form textarea {
+  padding: 1rem;
+  border: 1px solid #ff1e8e;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  resize: none;
+  transition: border-color, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contato .contato-form input:focus, .contato .contato-form textarea:focus {
+  border-color: #00cfd5;
+  box-shadow: 0 0 0 2px rgba(0, 207, 213, 0.15);
+  outline: none;
+}
+.contato .contato-form .btn {
+  align-self: flex-end;
+}
+.contato {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contato.active {
+  opacity: 1;
+  transform: none;
+}
+
+.footer {
+  background: #00cfd5;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 4px 24px rgba(255, 30, 142, 0.1);
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .header .container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nav {
+    margin-bottom: 1rem;
+  }
+  .nav a {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  .hero {
+    padding: 3rem 0 2rem 0;
+  }
+  .hero .hero-content h2 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 2rem 0;
+  }
+  section h3 {
+    font-size: 1.3rem;
+  }
+  .footer {
+    font-size: 0.9rem;
+    border-radius: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
